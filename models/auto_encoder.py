@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from torchsummary import summary
 import math
 
 
@@ -119,7 +120,7 @@ class Decoder(nn.Module):
 
 
 if __name__ == '__main__':
-    from torchsummary import summary
+
     emodel = Encoder(160, 192, 96, 512)
     dmodel = Decoder(160, 192, 96, 512)
     summary(emodel, (1, 160, 192, 96), device='cpu')

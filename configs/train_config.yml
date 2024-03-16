@@ -1,0 +1,17 @@
+name: "als_v0.0.1"
+
+data:
+  train_image: "/data/employee/son.nguyen/liver/01_Multi-Atlas_Labeling/clean"
+  val_image: "/data/employee/son.nguyen/liver/01_Multi-Atlas_Labeling/clean"
+
+image_size: [512, 512, 32]  # height, width, slice
+z_dim: 512  # latent representation space dimension
+
+lr: 1e-4
+weight_decay: 1e-5
+
+batch_size: 1
+num_workers: 2
+epochs: 200
+
+device_id: [0]

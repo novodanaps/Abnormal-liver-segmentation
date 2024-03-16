@@ -1,5 +1,4 @@
 import torch
-from monai.utils import set_determinism
 from monai.data import CacheDataset, DataLoader
 from monai.transforms import (
     AddChannelD,
@@ -9,7 +8,7 @@ from monai.transforms import (
     EnsureTypeD,
 )
 
-from model import Encoder, Decoder
+from models.auto_encoder import Encoder, Decoder
 
 from glob import glob
 import os
